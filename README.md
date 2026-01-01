@@ -7,7 +7,7 @@ This file contains regular expression (regex) rules to automatically clean and s
 ### 1. Album Cleanup
 
 **Pattern**: `(.*) (?:- (Single|EP)|- EP|- Single|\[ ?Clean ?\](?: \[ ?Clean ?\])?|\[ ?[Ee]xplicit ?\])`
-**Effect**: Removes suffixes like:
+**Effect**: Removes suffixes such as:
 
 - `- Single`, `- EP`
 - `[ Clean ]`, `[ Clean ][ Clean ]`
@@ -26,16 +26,16 @@ This file contains regular expression (regex) rules to automatically clean and s
 ### 4. Artist Comma Cleanup
 
 **Pattern**: `^(.*), (?!the creator|the creator\b|the creator\.|the creator\s|the creator$)(.+)$`
-**Effect**: Removes text after commas in artist names (except when it contains "the creator")
+**Effect**: Removes text after commas in artist names (except when it contains "the creator", for "Tyler, the Creator")
 
 ### 5. Track Cleanup (Comprehensive)
 
 **Pattern**: Complex regex removing multiple suffixes
 **Effect**: Removes:
 
-- `- 2024 Vinyl LP` (year and format info)
+- `- 2026 Vinyl LP` (year and format info)
 - `(Unreleased)` (release status)
-- `(2024 Remastered)`, `(Remastered 2024)` (remaster info)
+- `(2026 Remastered)`, `(Remastered 2026)` (remaster info)
 - `(prod. Producer Name)` (producer credits)
 - `(ft. Artist)`, `(feat. Artist)` (featuring credits)
 - `(part. Info)` (part information)
@@ -44,7 +44,7 @@ This file contains regular expression (regex) rules to automatically clean and s
 - `(Radio Edit)`, `- Radio Edit` (radio edits)
 - `(Visualizer)` (visualizer videos)
 
-### 6. Specific Artist Standardizations
+### 6. Specific Artist Personal Standardizations
 
 #### Oliver Francis
 
@@ -66,7 +66,7 @@ This file contains regular expression (regex) rules to automatically clean and s
 **Patterns**: `Empire! Empire!`, `empire empire`, `Empire Empire I was a Lonely Estate`, `Empire! Empire!(I Was A Lonely Estate)`
 **Standardized to**: `Empire! Empire! (I Was a Lonely Estate)`
 
-### 7. Specific Album Corrections
+### 7. Specific Album Personal Corrections
 
 #### Lil Peep Album
 
@@ -83,7 +83,7 @@ This file contains regular expression (regex) rules to automatically clean and s
 **Standardized to**: `what people call low self​-​esteem is really just seeing yourself the way that other people see you`
 **Effect**: Fixes dash character encoding
 
-### 8. Specific Track Corrections
+### 8. Specific Track Personal Corrections
 
 #### Bladee Track
 
@@ -94,12 +94,3 @@ This file contains regular expression (regex) rules to automatically clean and s
 
 **Patterns**: `Benz Truck Pt. 2`, `Benz Truck Pt 2`, `Benz Truck 2`
 **Standardized to**: `Benz Truck, Pt. 2`
-
-## How It Works
-
-Each rule contains:
-
-- **search**: A regex pattern to find specific metadata
-- **replace**: Replacement text, using capture groups (`$1`, `$2`, etc.)
-
-Rules are applied sequentially to music metadata to automatically clean and standardize the information.
