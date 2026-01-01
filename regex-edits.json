@@ -1,0 +1,115 @@
+[
+  {
+    "search": {
+      "track": null,
+      "artist": null,
+      "album": "(.*) (?:- (Single|EP)|- EP|- Single|\\[ ?Clean ?\\](?: \\[ ?Clean ?\\])?|\\[ ?[Ee]xplicit ?\\])",
+      "albumArtist": null
+    },
+    "replace": { "track": null, "artist": null, "album": "$1", "albumArtist": null }
+  },
+  {
+    "search": { "track": null, "artist": "(.*) - Topic", "album": null, "albumArtist": null },
+    "replace": { "track": null, "artist": "$1", "album": null, "albumArtist": null }
+  },
+  {
+    "search": { "track": null, "artist": "^(.*) (?:e|&) (.+)$", "album": null, "albumArtist": null },
+    "replace": { "track": null, "artist": "$1", "album": null, "albumArtist": null }
+  },
+  {
+    "search": {
+      "track": null,
+      "artist": "^(.*), (?!the creator|the creator\\b|the creator\\.|the creator\\s|the creator$)(.+)$",
+      "album": null,
+      "albumArtist": null
+    },
+    "replace": { "track": null, "artist": "$1", "album": null, "albumArtist": null }
+  },
+  {
+    "search": {
+      "track": "(.*)\\s*(?:- \\d{4} Vinyl LP|\\(Unreleased\\)|\\(\\d{4}\\s*[Rr]emaster(?:ed)?\\)|\\([Rr]emaster(?:ed)?(?:\\s*\\d{4})?\\)|\\(prod\\.[^)]+\\)|\\(ft\\.[^)]+\\)|\\(part\\.[^)]+\\)|\\(feat\\.[^)]+\\)|\\(Official (?:Video|Audio|Lyric Video)\\)|\\(Lyrics\\)|\\(Lyric Video\\)|\\(Radio Edit\\)|- Radio Edit|\\(Visualizer\\)| \\(Official (?:Video|Audio|Lyric Video)\\)| \\(Lyrics\\)| \\(Lyric Video\\)| \\(Radio Edit\\)| \\(Visualizer\\)| \\(part\\.[^)]+\\)| \\(ft\\.[^)]+\\)| \\(feat\\.[^)]+\\)| \\(prod\\.[^)]+\\))$",
+      "artist": null,
+      "album": null,
+      "albumArtist": null
+    },
+    "replace": { "track": "$1", "artist": null, "album": null, "albumArtist": null }
+  },
+  {
+    "search": {
+      "track": null,
+      "artist": "Oliver|Oliver~|Oliver~",
+      "album": null,
+      "albumArtist": "Oliver|Oliver~|Oliver~"
+    },
+    "replace": { "track": null, "artist": "Oliver Francis", "album": null, "albumArtist": "Oliver Francis" }
+  },
+  {
+    "search": {
+      "track": null,
+      "artist": "alex_g_offline|alexgoffline|alexgonline|(Sandy) Alex G",
+      "album": null,
+      "albumArtist": "alex_g_offline|alexgoffline|alexgonline|(Sandy) Alex G"
+    },
+    "replace": { "track": null, "artist": "Alex G", "album": null, "albumArtist": "Alex G" }
+  },
+  {
+    "search": {
+      "track": null,
+      "artist": "☆LiL PEEP☆|lilpeep",
+      "album": null,
+      "albumArtist": "☆LiL PEEP☆|lilpeep"
+    },
+    "replace": { "track": null, "artist": "Lil Peep", "album": null, "albumArtist": "Lil Peep" }
+  },
+  {
+    "search": {
+      "track": null,
+      "artist": "Empire! Empire!|empire empire|Empire Empire I was a Lonely Estate|Empire! Empire!(I Was A Lonely Estate)",
+      "album": null,
+      "albumArtist": "Empire! Empire!|empire empire|Empire Empire I was a Lonely Estate|Empire! Empire!(I Was A Lonely Estate)"
+    },
+    "replace": {
+      "track": null,
+      "artist": "Empire! Empire! (I Was a Lonely Estate)",
+      "album": null,
+      "albumArtist": "Empire! Empire! (I Was a Lonely Estate)"
+    }
+  },
+  {
+    "search": { "track": null, "artist": null, "album": "LiL PEEP PART ONE|LiL PEEP, PART ONE", "albumArtist": null },
+    "replace": { "track": null, "artist": null, "album": "LiL PEEP; PART ONE", "albumArtist": null }
+  },
+  {
+    "search": { "track": null, "artist": "Bladee", "album": "3STYLE", "albumArtist": null },
+    "replace": { "track": null, "artist": "Bladee", "album": null, "albumArtist": null }
+  },
+  {
+    "search": {
+      "artist": "awakebutstillinbed",
+      "album": "what people call low self‐esteem is really just seeing yourself the way that other people see you",
+      "albumArtist": "what people call low self‐esteem is really just seeing yourself the way that other people see you"
+    },
+    "replace": {
+      "album": "what people call low self​-​esteem is really just seeing yourself the way that other people see you",
+      "albumArtist": "what people call low self​-​esteem is really just seeing yourself the way that other people see you"
+    }
+  },
+  {
+    "search": {
+      "track": "Fuck the world I'm still suicidal|Fuck the world I'm still suicidal|Fuck the world I am still suicidal",
+      "artist": "Bladee",
+      "album": null,
+      "albumArtist": null
+    },
+    "replace": { "track": "Fuck the world im still suicidal", "artist": null, "album": null, "albumArtist": null }
+  },
+  {
+    "search": {
+      "track": "Benz Truck Pt. 2|Benz Truck Pt 2|Benz Truck 2",
+      "artist": "Lil Peep",
+      "album": null,
+      "albumArtist": null
+    },
+    "replace": { "track": "Benz Truck, Pt. 2", "artist": null, "album": null, "albumArtist": null }
+  }
+]
